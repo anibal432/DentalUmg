@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOMBRE_APP | Descarga la app</title>
+  <meta name="description" content="Descarga NOMBRE_APP para Android. Información, capturas y guía de instalación.">
+  <meta name="theme-color" content="#1e88e5">
+  <link rel="icon" href="assets/logo.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <a href="#inicio" class="brand">
+      <img src="assets/logo.png" alt="Logo" class="brand-logo">
+      <span>NOMBRE_APP</span>
+    </a>
+    <nav>
+      <a href="#caracteristicas">Características</a>
+      <a href="#capturas">Capturas</a>
+      <a href="#instalar">Instalar</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="inicio" class="hero">
+    <div class="hero-text">
+      <h1>Tu app, <span>siempre en tu bolsillo</span></h1>
+      <p>Descripción corta de lo que hace tu aplicación y el problema que resuelve. Rápida, gratuita y fácil de usar.</p>
+      <div class="hero-buttons">
+        <a id="btn-descargar" class="btn btn-primary"
+           href="https://github.com/USUARIO/REPO/releases/latest/download/mi-app.apk">
+          ⬇ Descargar para Android
+        </a>
+        <a href="#instalar" class="btn btn-secondary">Cómo instalar</a>
+      </div>
+      <p id="aviso-dispositivo" class="aviso"></p>
+    </div>
+    <div class="hero-img">
+      <img src="assets/screen1.png" alt="Pantalla principal de la app">
+    </div>
+  </section>
+
+  <!-- CARACTERÍSTICAS -->
+  <section id="caracteristicas" class="section">
+    <h2>Características</h2>
+    <div class="cards">
+      <article class="card">
+        <div class="icon">📍</div>
+        <h3>Característica 1</h3>
+        <p>Explica brevemente qué puede hacer el usuario con esta función.</p>
+      </article>
+      <article class="card">
+        <div class="icon">🔒</div>
+        <h3>Seguro</h3>
+        <p>Tus datos se protegen con autenticación y base de datos en la nube.</p>
+      </article>
+      <article class="card">
+        <div class="icon">⚡</div>
+        <h3>Rápido</h3>
+        <p>Información actualizada en tiempo real gracias a Firebase.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- CAPTURAS -->
+  <section id="capturas" class="section alt">
+    <h2>Capturas de pantalla</h2>
+    <div class="screens">
+      <img src="assets/screen1.png" alt="Captura 1">
+      <img src="assets/screen2.png" alt="Captura 2">
+      <img src="assets/screen3.png" alt="Captura 3">
+    </div>
+  </section>
+
+  <!-- INSTALACIÓN -->
+  <section id="instalar" class="section">
+    <h2>Cómo instalar en tu celular</h2>
+    <ol class="steps">
+      <li>
+        <strong>Descarga el APK</strong>
+        <p>Toca el botón «Descargar para Android» desde tu celular.</p>
+      </li>
+      <li>
+        <strong>Permite la instalación</strong>
+        <p>Si Android lo pide, activa <em>«Permitir de esta fuente»</em> o <em>«Instalar apps desconocidas»</em> para tu navegador.</p>
+      </li>
+      <li>
+        <strong>Abre el archivo e instala</strong>
+        <p>Abre el archivo descargado y toca <em>Instalar</em>. Si aparece un aviso de Play Protect, elige <em>«Instalar de todos modos»</em>.</p>
+      </li>
+      <li>
+        <strong>¡Listo!</strong>
+        <p>Abre NOMBRE_APP desde tu menú de aplicaciones.</p>
+      </li>
+    </ol>
+    <p class="nota">📱 Disponible solo para Android por ahora. Versión para iPhone próximamente.</p>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section alt">
+    <h2>Preguntas frecuentes</h2>
+    <details>
+      <summary>¿Es gratis?</summary>
+      <p>Sí, la descarga y el uso de la app son gratuitos.</p>
+    </details>
+    <details>
+      <summary>¿Por qué sale una advertencia al instalar?</summary>
+      <p>Porque la app no se descarga desde Google Play. Es normal en instalaciones directas por APK.</p>
+    </details>
+    <details>
+      <summary>¿Qué permisos necesita?</summary>
+      <p>Indica aquí los permisos que usa tu app (ubicación, cámara, etc.) y para qué.</p>
+    </details>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2026 NOMBRE_APP · Hecho en Guatemala 🇬🇹</p>
+    <p><a href="https://github.com/USUARIO/REPO" target="_blank" rel="noopener">Código en GitHub</a></p>
+  </footer>
+
+  <script>
+    // Avisa si el usuario entra desde un dispositivo que no es Android
+    const ua = navigator.userAgent;
+    const aviso = document.getElementById("aviso-dispositivo");
+    const boton = document.getElementById("btn-descargar");
+
+    if (/iPhone|iPad|iPod/i.test(ua)) {
+      aviso.textContent = "Estás en iPhone/iPad: por ahora la app solo está disponible para Android.";
+      boton.classList.add("disabled");
+    } else if (!/Android/i.test(ua)) {
+      aviso.textContent = "Abre esta página desde tu celular Android para instalar la app.";
+    }
+  </script>
+</body>
+</html>
