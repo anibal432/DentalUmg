@@ -3,101 +3,188 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NOMBRE_APP | Descarga la app</title>
-  <meta name="description" content="Descarga App Dental para Android. Información, capturas y guía de instalación.">
-  <meta name="theme-color" content="#1e88e5">
-  <link rel="icon" href="assets/logo.png">
+  <title>Clínica Dental | App de salud bucodental con IA</title>
+  <meta name="description" content="Aplicación móvil para el consejo y análisis dental con inteligencia artificial y geolocalización de clínicas dentales en Coatepeque, Quetzaltenango.">
+  <meta name="theme-color" content="#2b2670">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🦷</text></svg>">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <!-- NAVBAR -->
   <header class="navbar">
-    <a href="#inicio" class="brand">
-      <img src="assets/logo.png" alt="Logo" class="brand-logo">
-      <span>NOMBRE_APP</span>
-    </a>
-    <nav>
-      <a href="#caracteristicas">Características</a>
-      <a href="#capturas">Capturas</a>
+    <a href="#inicio" class="brand"><span class="brand-icon">🦷</span> Clínica Dental</a>
+
+    <nav id="menu">
+      <a href="#funciones">Funciones</a>
       <a href="#instalar">Instalar</a>
+      <a href="#tutorial">Tutorial</a>
+      <a href="#descargas">Descargas</a>
       <a href="#faq">FAQ</a>
     </nav>
+
+    <a class="btn btn-primary btn-sm nav-cta" href="#descargas">⬇ Descargar</a>
+    <button id="menu-btn" class="menu-btn" aria-label="Abrir menú" aria-expanded="false">☰</button>
   </header>
 
   <!-- HERO -->
   <section id="inicio" class="hero">
-    <div class="hero-text">
-      <h1>Tu app, <span>siempre en tu bolsillo</span></h1>
-      <p>Descripción corta de lo que hace tu aplicación y el problema que resuelve. Rápida, gratuita y fácil de usar.</p>
+    <div class="hero-inner">
+
+
+      <h1>Cuida tu sonrisa con ayuda de la <span>inteligencia artificial</span></h1>
+      <p class="hero-desc">Toma una foto de tus dientes, recibe una orientación al instante y encuentra clínicas dentales cercanas a ti. Además, consejos de salud bucodental y recordatorios para tus citas.</p>
+
       <div class="hero-buttons">
-        <a id="btn-descargar" class="btn btn-primary"
+        <a class="btn btn-light btn-lg btn-pulse js-apk"
            href="https://github.com/anibal432/DentalUmg/releases/latest/download/mi-app.apk">
           ⬇ Descargar para Android
         </a>
-        <a href="#instalar" class="btn btn-secondary">Cómo instalar</a>
+        <a class="btn btn-ghost btn-lg" href="#instalar">Cómo instalar</a>
       </div>
+
       <p id="aviso-dispositivo" class="aviso"></p>
-    </div>
-    <div class="hero-img">
-      <img src="assets/screen1.png" alt="Pantalla principal de la app">
+
+      <ul class="hero-points">
+        <li>🤖 Análisis con IA</li>
+        <li>📍 Clínicas cercanas</li>
+        <li>⏰ Recordatorios</li>
+      </ul>
+      <p class="hero-meta">Gratis · Android · Coatepeque, Quetzaltenango</p>
     </div>
   </section>
 
-  <!-- CARACTERÍSTICAS -->
-  <section id="caracteristicas" class="section">
-    <h2>Características</h2>
+  <!-- FUNCIONES -->
+  <section id="funciones" class="section">
+    <h2>Todo lo que puedes hacer</h2>
+    <p class="lead">Una sola app para cuidar tu salud bucal, sin conocimientos técnicos.</p>
     <div class="cards">
       <article class="card">
+        <div class="icon">🤖</div>
+        <h3>Análisis dental con IA</h3>
+        <p>Detecta posibles caries, aftas, gingivitis y sarro a partir de una fotografía.</p>
+      </article>
+      <article class="card">
+        <div class="icon">💡</div>
+        <h3>Consejos dentales</h3>
+        <p>Contenido educativo para niños, adultos, higiene, prevención y emergencias.</p>
+      </article>
+      <article class="card">
         <div class="icon">📍</div>
-        <h3>Característica 1</h3>
-        <p>Explica brevemente qué puede hacer el usuario con esta función.</p>
+        <h3>Clínicas cercanas</h3>
+        <p>Encuentra clínicas por distancia, mira sus servicios y llega con tu mapa favorito.</p>
       </article>
       <article class="card">
-        <div class="icon">🔒</div>
-        <h3>Seguro</h3>
-        <p>Tus datos se protegen con autenticación y base de datos en la nube.</p>
+        <div class="icon">📖</div>
+        <h3>Diccionario dental</h3>
+        <p>Entiende los términos odontológicos con un glosario por categorías y letras.</p>
       </article>
       <article class="card">
-        <div class="icon">⚡</div>
-        <h3>Rápido</h3>
-        <p>Información actualizada en tiempo real gracias a Firebase.</p>
+        <div class="icon">⏰</div>
+        <h3>Mis recordatorios</h3>
+        <p>Programa tus citas (revisión, limpieza o urgencia) y recibe notificaciones.</p>
+      </article>
+      <article class="card">
+        <div class="icon">⭐</div>
+        <h3>Tu opinión cuenta</h3>
+        <p>Califica la app y envía comentarios para ayudarnos a mejorarla.</p>
       </article>
     </div>
   </section>
 
-  <!-- CAPTURAS -->
-  <section id="capturas" class="section alt">
-    <h2>Capturas de pantalla</h2>
-    <div class="screens">
-      <img src="assets/screen1.png" alt="Captura 1">
-      <img src="assets/screen2.png" alt="Captura 2">
-      <img src="assets/screen3.png" alt="Captura 3">
-    </div>
-  </section>
+  <!-- INSTALAR -->
+  <section id="instalar" class="section alt">
+    <h2>Cómo instalar la app</h2>
+    <p class="lead">Son menos de 2 minutos. Hazlo desde tu celular Android.</p>
 
-  <!-- INSTALACIÓN -->
-  <section id="instalar" class="section">
-    <h2>Cómo instalar en tu celular</h2>
     <ol class="steps">
       <li>
-        <strong>Descarga el APK</strong>
-        <p>Toca el botón «Descargar para Android» desde tu celular.</p>
+        <strong>Descarga el archivo</strong>
+        <p>Toca el botón <em>«Descargar APK»</em>. La descarga empieza sola.</p>
       </li>
       <li>
         <strong>Permite la instalación</strong>
-        <p>Si Android lo pide, activa <em>«Permitir de esta fuente»</em> o <em>«Instalar apps desconocidas»</em> para tu navegador.</p>
+        <p>Si Android lo pide, activa <em>«Instalar apps desconocidas»</em> o <em>«Permitir de esta fuente»</em> para tu navegador.</p>
       </li>
       <li>
         <strong>Abre el archivo e instala</strong>
-        <p>Abre el archivo descargado y toca <em>Instalar</em>. Si aparece un aviso de Play Protect, elige <em>«Instalar de todos modos»</em>.</p>
+        <p>Ábrelo desde las notificaciones o desde <em>Descargas</em> y toca <em>Instalar</em>. Si aparece un aviso de Play Protect, elige <em>«Instalar de todos modos»</em>.</p>
       </li>
       <li>
-        <strong>¡Listo!</strong>
-        <p>Abre NOMBRE_APP desde tu menú de aplicaciones.</p>
+        <strong>Concede los permisos</strong>
+        <p>Al abrir la app por primera vez, acepta cámara, galería, ubicación y notificaciones para usar todas las funciones.</p>
       </li>
     </ol>
-    <p class="nota">📱 Disponible solo para Android por ahora. Versión para iPhone próximamente.</p>
+  </section>
+
+  <!-- TUTORIAL EN VIDEO (vertical) -->
+  <section id="tutorial" class="section video-section">
+    <h2>Tutorial en video</h2>
+    <p class="lead">Mira paso a paso cómo descargar, instalar y usar la app. Está grabado en vertical para que lo veas cómodo desde tu celular.</p>
+
+    <!--
+      Cuando subas tu video a YouTube, reemplaza VIDEO_ID por el ID del video:
+        https://www.youtube.com/watch?v=ABC123xyz   →  ABC123xyz
+        https://youtube.com/shorts/ABC123xyz        →  ABC123xyz
+        https://youtu.be/ABC123xyz                  →  ABC123xyz
+    -->
+    <div class="video-frame" id="video-wrap" data-video-id="VIDEO_ID">
+      <div class="video-placeholder">
+        <div class="play">▶</div>
+        <strong>Próximamente</strong>
+        <p>Estamos grabando el tutorial en video.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- DESCARGAS -->
+  <section id="descargas" class="section">
+    <h2>Descargas y recursos</h2>
+    <p class="lead">Todo lo que necesitas para empezar, en un solo lugar.</p>
+
+    <div class="dl-grid">
+      <!-- APK -->
+      <article class="res-card res-main">
+        <span class="badge">Recomendado</span>
+        <div class="res-icon">📱</div>
+        <h3>Aplicación para Android</h3>
+        <p class="res-desc">Instala Clínica Dental directamente en tu celular.</p>
+        <ul class="checks">
+          <li>Sistema operativo Android</li>
+          <li>Conexión a Internet (Wi-Fi o datos móviles)</li>
+          <li>Permisos de cámara, galería y ubicación</li>
+          <li>Permiso de notificaciones y alarmas exactas</li>
+        </ul>
+        <div class="res-action">
+          <a class="btn btn-primary btn-lg btn-block btn-pulse js-apk"
+             href="https://github.com/anibal432/DentalUmg/releases/latest/download/mi-app.apk">
+            ⬇ Descargar APK
+          </a>
+          <p class="res-note">Versión para iPhone próximamente.</p>
+        </div>
+      </article>
+
+      <!-- MANUAL -->
+      <article class="res-card">
+        <div class="res-icon">📘</div>
+        <h3>Manual de usuario</h3>
+        <p class="res-desc">Guía paso a paso, con capturas, de todas las funciones: registro, análisis con IA, clínicas, recordatorios y más.</p>
+        <ul class="checks">
+          <li>Formato Word (.docx)</li>
+          <li>Explicado para usuarios sin conocimientos técnicos</li>
+        </ul>
+        <div class="res-action">
+          <a class="btn btn-dark btn-lg btn-block" href="assets/Manual_de_Usuario_App_Dental.docx" download>
+            ⬇ Descargar manual
+          </a>
+          <p class="res-note">Se abre con Word o Google Docs.</p>
+          <!-- Si exportas el manual a PDF, descomenta este botón:
+          <a class="btn btn-outline btn-block" style="margin-top:10px" href="assets/Manual_de_Usuario_App_Dental.pdf" target="_blank" rel="noopener">📄 Abrir en PDF</a>
+          -->
+        </div>
+      </article>
+    </div>
   </section>
 
   <!-- FAQ -->
@@ -105,36 +192,100 @@
     <h2>Preguntas frecuentes</h2>
     <details>
       <summary>¿Es gratis?</summary>
-      <p>Sí, la descarga y el uso de la app son gratuitos.</p>
+      <p>Sí, la descarga y el uso de la aplicación son gratuitos.</p>
+    </details>
+    <details>
+      <summary>¿Reemplaza a un dentista?</summary>
+      <p>No. El análisis con IA y los consejos son orientativos. Ante cualquier duda o síntoma, consulta siempre con un odontólogo certificado.</p>
     </details>
     <details>
       <summary>¿Por qué sale una advertencia al instalar?</summary>
-      <p>Porque la app no se descarga desde Google Play. Es normal en instalaciones directas por APK.</p>
+      <p>Porque la app se descarga directamente y no desde Google Play. Es normal en instalaciones por APK; elige «Instalar de todos modos».</p>
     </details>
     <details>
-      <summary>¿Qué permisos necesita?</summary>
-      <p>Indica aquí los permisos que usa tu app (ubicación, cámara, etc.) y para qué.</p>
+      <summary>¿Puedo usarla sin Internet?</summary>
+      <p>Para registrarte, analizar fotos y sincronizar recordatorios necesitas conexión. Las clínicas tienen un respaldo local para cuando falle la conectividad.</p>
+    </details>
+    <details>
+      <summary>¿Cómo elimino mi cuenta?</summary>
+      <p>Entra a «Mi Cuenta», baja a la «Zona de peligro» y presiona «Eliminar cuenta». Se borrarán tu perfil y tus recordatorios.</p>
     </details>
   </section>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <p>© 2026 NOMBRE_APP · Hecho en Guatemala 🇬🇹</p>
-    <p><a href="https://github.com/USUARIO/REPO" target="_blank" rel="noopener">Código en GitHub</a></p>
+    <p><strong>Clínica Dental</strong> · Aplicación móvil para el consejo y análisis dental con IA y geolocalización de clínicas</p>
+    <p>Municipio de Coatepeque, Quetzaltenango · Guatemala 🇬🇹</p>
+    <p>Desarrollado por Gehudy Anibal Morales Alvarado</p>
+    <p><a href="https://github.com/anibal432/DentalUmg" target="_blank" rel="noopener">Ver en GitHub</a></p>
   </footer>
 
+  <!-- BARRA DE DESCARGA FIJA (solo celulares) -->
+  <div class="mobile-bar">
+    <a class="btn btn-primary js-apk"
+       href="https://github.com/anibal432/DentalUmg/releases/latest/download/mi-app.apk">
+      ⬇ Descargar app gratis
+    </a>
+  </div>
+
+  <!-- AVISO DE DESCARGA -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
   <script>
-    // Avisa si el usuario entra desde un dispositivo que no es Android
+    // ---- Menú hamburguesa ----
+    const menu = document.getElementById("menu");
+    const menuBtn = document.getElementById("menu-btn");
+
+    function cerrarMenu() {
+      menu.classList.remove("open");
+      menuBtn.setAttribute("aria-expanded", "false");
+      menuBtn.textContent = "☰";
+    }
+
+    menuBtn.addEventListener("click", () => {
+      const abierto = menu.classList.toggle("open");
+      menuBtn.setAttribute("aria-expanded", abierto);
+      menuBtn.textContent = abierto ? "✕" : "☰";
+    });
+    menu.querySelectorAll("a").forEach(a => a.addEventListener("click", cerrarMenu));
+    window.addEventListener("resize", () => { if (window.innerWidth > 900) cerrarMenu(); });
+
+    // ---- Video de YouTube (se activa al poner el ID en data-video-id) ----
+    const videoWrap = document.getElementById("video-wrap");
+    const videoId = (videoWrap.dataset.videoId || "").trim();
+
+    if (videoId && videoId !== "VIDEO_ID") {
+      videoWrap.innerHTML =
+        '<iframe src="https://www.youtube-nocookie.com/embed/' + encodeURIComponent(videoId) +
+        '?rel=0&modestbranding=1&playsinline=1" ' +
+        'title="Tutorial de Clínica Dental" loading="lazy" ' +
+        'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ' +
+        'referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
+    }
+
+    // ---- Aviso según el dispositivo ----
     const ua = navigator.userAgent;
     const aviso = document.getElementById("aviso-dispositivo");
-    const boton = document.getElementById("btn-descargar");
+    const toast = document.getElementById("toast");
+    const botones = document.querySelectorAll(".js-apk");
+    let toastTimer;
 
     if (/iPhone|iPad|iPod/i.test(ua)) {
       aviso.textContent = "Estás en iPhone/iPad: por ahora la app solo está disponible para Android.";
-      boton.classList.add("disabled");
+      botones.forEach(b => b.classList.add("disabled"));
+      document.querySelector(".mobile-bar").style.display = "none";
     } else if (!/Android/i.test(ua)) {
       aviso.textContent = "Abre esta página desde tu celular Android para instalar la app.";
     }
+
+    // ---- Mensaje al iniciar la descarga ----
+    botones.forEach(b => b.addEventListener("click", () => {
+      if (b.classList.contains("disabled")) return;
+      toast.innerHTML = "✅ <strong>Descarga iniciada.</strong> Cuando termine, ábrela desde las notificaciones o desde <strong>Descargas</strong> y toca <strong>Instalar</strong>.";
+      toast.classList.add("show");
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toast.classList.remove("show"), 9000);
+    }));
   </script>
 </body>
 </html>
