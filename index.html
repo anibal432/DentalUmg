@@ -122,13 +122,8 @@
     <h2>Tutorial en video</h2>
     <p class="lead">Mira paso a paso cómo descargar, instalar y usar la app. Está grabado en vertical para que lo veas cómodo desde tu celular.</p>
 
-    <!--
-      Cuando subas tu video a YouTube, reemplaza VIDEO_ID por el ID del video:
-        https://www.youtube.com/watch?v=ABC123xyz   →  ABC123xyz
-        https://youtube.com/shorts/ABC123xyz        →  ABC123xyz
-        https://youtu.be/ABC123xyz                  →  ABC123xyz
-    -->
-    <div class="video-frame" id="video-wrap" data-video-id="VIDEO_ID">
+    <!-- Video de YouTube: tutorial de cómo descargar la App Dental -->
+    <div class="video-frame" id="video-wrap" data-video-id="h3Z9F6XHLdg">
       <div class="video-placeholder">
         <div class="play">▶</div>
         <strong>Próximamente</strong>
@@ -258,7 +253,7 @@
       videoWrap.innerHTML =
         '<iframe src="https://www.youtube-nocookie.com/embed/' + encodeURIComponent(videoId) +
         '?rel=0&modestbranding=1&playsinline=1" ' +
-        'title="Tutorial de Clínica Dental" loading="lazy" ' +
+        'title="Tutorial de como descargar la App Dental" loading="lazy" ' +
         'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ' +
         'referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
     }
